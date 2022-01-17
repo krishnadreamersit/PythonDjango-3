@@ -16,9 +16,15 @@ def successgallery(request):
     return render(request, 'successgallery.html')
     # return HttpResponse("Success Galleries")
 
+<<<<<<< HEAD
 def testimonials(request):
     return render(request, 'testimonials.html')
     # return HttpResponse("Tentimonials")
+=======
+
+def testimonials(rerquest):
+    return HttpResponse("Tentimonials")
+>>>>>>> 10f9ab00cbe8da39e9b7e1006fec3796e8638283
 
 def onlineadmission(request):
     return HttpResponse("Online Admission")
