@@ -16,21 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-# Step-1
-from app1.views import index, hello
-from app2 import views as v2
+from . import views # Step-1
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    
-    # Step-2 create new url pattern
-    path('app1/', index),
-    path('app12/', hello),
-    path('app2/', v2.index),
-    path('app2_1/', v2.load_html),
-
-    path('app2/about', v2.about),
-    path('app2/contact', v2.contact),
-    path('app2/index', v2.index),
-    path('app2/services', v2.services),
+    # Step-2
+    path('', views.home), # 127.0.0.1/home/ -> url pattern views.home -> function to call
+    path('success/', views.successgallery),
+    path('testimonials/', views.testimonials),
+    path('admission/', views.onlineadmission),
+    path('payment/', views.paymentoption),
+    path('offers/', views.offers),
+    path('career/', views.career),
+    path('contactus/', views.contactus),
+    path('blog/', views.blog),
+    path('admin/', admin.site.urls), # System Defined
 ]
