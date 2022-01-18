@@ -3,7 +3,7 @@ from django.http import HttpResponse # return string as html
 from django.shortcuts import render # return html file as html
 
 # Step-2 - create new function
-def home(request):
+def index(request):
     str1 = "<html><head><style>body{padding-top:50pt;}</style><title>Welcome to broadwayinfosys.com</title></head><body bgcolor='blue' text='white'>"
     str1 = str1 + "<h1>Building Global IT Professionals since 2008</h1>"
     str1 = str1 +"<h3>AN ISO 9001:2015 CERTIFIED IT LEARNING CENTER</h3>"
@@ -16,15 +16,13 @@ def successgallery(request):
     return render(request, 'successgallery.html')
     # return HttpResponse("Success Galleries")
 
-<<<<<<< HEAD
+
 def testimonials(request):
     return render(request, 'testimonials.html')
     # return HttpResponse("Tentimonials")
-=======
 
 def testimonials(rerquest):
     return HttpResponse("Tentimonials")
->>>>>>> 10f9ab00cbe8da39e9b7e1006fec3796e8638283
 
 def onlineadmission(request):
     return HttpResponse("Online Admission")
