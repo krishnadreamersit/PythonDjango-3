@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app1_1',
+    'app1_1', # Hello world, function in views, url pattern, html rander, static contents (css, image, js)
+    'app1_2', # Getting Values form Client
 ]
 
 MIDDLEWARE = [
