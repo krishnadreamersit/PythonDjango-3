@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-
-
 def index(request):
     # Receive value form url
     tmpid = request.GET.get('id')
@@ -28,3 +26,34 @@ def display_links(request):
 
 def display_form(request):
     return render(request, 'app1_2/form1.html')
+
+
+def get_values3(request):
+    # get values from url
+    pid = request.GET.get('txt_id')
+    fullname = request.GET.get('txt_name')
+    address = request.GET.get('txt_address')
+    context = {'pid': pid, 'fullname':fullname, 'address': address}
+    return render(request, 'app1_2/display3.html', context)
+
+def get_values4(request):
+    # get values from url
+    pid = request.POST.get('txt_id')
+    fullname = request.POST.get('txt_name')
+    address = request.POST.get('txt_address')
+    context = {'pid': pid, 'fullname':fullname, 'address': address}
+    return render(request, 'app1_2/display3.html', context)
+
+
+def get_values5(request):
+    if(request.method=='GET'):
+        # display form
+        return render(request, 'app1_2/form2.html')
+    elif(request.method=='POST'):
+        # receive values from url
+        # get values from url
+        pid = request.POST.get('txt_id')
+        fullname = request.POST.get('txt_name')
+        address = request.POST.get('txt_address')
+        context = {'pid': pid, 'fullname':fullname, 'address': address}
+        return render(request, 'app1_2/display3.html', context)
