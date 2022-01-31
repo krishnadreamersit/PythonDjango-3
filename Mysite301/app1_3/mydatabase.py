@@ -6,8 +6,9 @@
 
 import sqlite3
 import sys
-DB_FILE = "./db.sqlite3"
+from app1_3.person import Person
 
+DB_FILE = "./db.sqlite3"
 
 class MyDatabase():
     def connect_db(self):
@@ -60,13 +61,31 @@ class MyDatabase():
             cursor = conn.cursor()  # Executor Object - runs the sql statement
             cursor.execute(sql)  # Execute
             records = cursor.fetchall()
-            for record in records:
-                print(record)
+            # for record in records:
+            #     print(record)
             conn.close()  # Close
-            return True
+            return records
         except:
             print("Error : ", sys.exc_info()[1])
-            return False
+            return None
+
+    def select_all2(self):
+        persons = []
+        sql = """SELECT * FROM tbl_persons"""
+        try:
+            conn = sqlite3.connect(DB_FILE)
+            cursor = conn.cursor()  # Executor Object - runs the sql statement
+            cursor.execute(sql)  # Execute
+            records = cursor.fetchall()
+            for record in records:
+                person = Person(record[0], record[1], record[2])
+                persons.append(person)
+                # print(record)
+            conn.close()  # Close
+            return persons
+        except:
+            print("Error : ", sys.exc_info()[1])
+            return None
 
     def search_record(self, search_term):
         sql = """SELECT * FROM tbl_persons WHERE fullname=? or contactaddress=?"""

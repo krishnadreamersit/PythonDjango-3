@@ -6,11 +6,18 @@
 </head>
 <body>
 <h3>All Persons</h3>
+<h4><a href="new">New</a></h4>
 <!--
     Select
     Insert
     Update
     Delete
 -->
+<table border="1" width="90%">
+    <tr><td>ID</td><td>NAME</td><td>ADDRESS</td></tr>
+    {% for person in persons %}
+        <tr><td>{{ person.pid }}</td><td>{{ person.fullname }}</td><td>{{ person.contactaddress }}</td></tr>
+    {% endfor %}
+</table>
 </body>
 </html>
