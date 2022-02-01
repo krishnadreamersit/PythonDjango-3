@@ -6,4 +6,7 @@ urlpatterns = [
     path('index', views.index),
     path('new', views.new_form),
     path('save', views.save),
+    path('edit', views.edit),
+    path('update', views.upate),
+    path('delete', views.delete),
 ]

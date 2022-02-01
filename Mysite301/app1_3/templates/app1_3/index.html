@@ -14,9 +14,9 @@
     Delete
 -->
 <table border="1" width="90%">
-    <tr><td>ID</td><td>NAME</td><td>ADDRESS</td></tr>
+    <tr><td>ID</td><td>NAME</td><td>ADDRESS</td><td>MANAGE</td></tr>
     {% for person in persons %}
-        <tr><td>{{ person.pid }}</td><td>{{ person.fullname }}</td><td>{{ person.contactaddress }}</td></tr>
+        <tr><td>{{ person.pid }}</td><td>{{ person.fullname }}</td><td>{{ person.contactaddress }}</td><td><a href="edit?pid={{ person.pid }}">EDIT</a> | <a href="delete?pid={{ person.pid }}">DELETE</a></td></tr>
     {% endfor %}
 </table>
 </body>

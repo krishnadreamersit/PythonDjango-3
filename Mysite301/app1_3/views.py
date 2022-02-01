@@ -28,3 +28,24 @@ def save(request):
     result = mydb.insert_record(pid, name, address) # insert record in database
     return HttpResponseRedirect('index')
 
+def edit(request):
+    pid = request.GET.get("pid")
+    # Search record in database
+    mydb = MyDatabase(); # Create database object
+    person1 = mydb.search_record2(pid)
+    return render(request, 'app1_3/edit.html', {'person': person1})
+
+def upate(request):
+    # Read values
+    pid = request.POST.get('txtID')
+    name = request.POST.get('txtName')
+    address = request.POST.get('txtAddress')
+    mydb = MyDatabase(); # Create database object
+    result = mydb.update_record(pid, name, address) # insert record in database
+    return HttpResponseRedirect('index')
+
+def delete(request):
+    pid = request.GET.get("pid")
+    mydb = MyDatabase();  # Create database object
+    mydb.delete_record(pid)
+    return HttpResponseRedirect('index')

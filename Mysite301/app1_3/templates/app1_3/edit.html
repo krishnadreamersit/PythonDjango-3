@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Person Edit</title>
+    <title>Person Edit Form</title>
 </head>
 <body>
-
+<h3>Person Edit Form</h3>
+    <form method="post" action="update">
+        {% csrf_token %}
+        <p>ID : <input type="text" name="txtID" value="{{ person.pid }}"></p>
+        <p>NAME : <input type="text" name="txtName" value="{{ person.fullname }}"></p>
+        <p>ADDRESS : <input type="text" name="txtAddress" value="{{ person.contactaddress }}"></p>
+        <p><input type="submit" value="SAVE"></p> </p>
+    </form>
 </body>
 </html>

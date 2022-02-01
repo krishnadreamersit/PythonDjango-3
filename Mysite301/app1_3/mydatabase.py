@@ -103,6 +103,22 @@ class MyDatabase():
             print("Error : ", sys.exc_info()[1])
             return False
 
+    def search_record2(self, pid):
+        sql = """SELECT * FROM tbl_persons WHERE pid=?"""
+        values = (pid,)
+        person = None
+        try:
+            conn = sqlite3.connect(DB_FILE)
+            cursor = conn.cursor()  # Executor Object - runs the sql statement
+            cursor.execute(sql, values)  # Execute
+            record = cursor.fetchone()
+            person = Person(record[0], record[1], record[2])
+            conn.close()  # Close
+            return person
+        except:
+            print("Error : ", sys.exc_info()[1])
+            return person
+
     def update_record(self, pid, full_name, contact_address):
         sql = """UPDATE tbl_persons set fullname=?, contactaddress=? where pid=?"""
         values = (full_name, contact_address, pid)
