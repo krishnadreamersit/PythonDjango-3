@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'app1_1', # Hello world, function in views, url pattern, html rander, static contents (css, image, js)
     'app1_2', # Getting Values form Client
-    'app2_1', # Create database table
     'app1_3', # CRUD Application-1
+
+    'app2_1', # Database Connection and Model
+
 ]
 
 MIDDLEWARE = [
@@ -85,6 +88,8 @@ DATABASES = {
     }
 }
 
+# MySQL, MSSQL, Oracle, MariaDB, PostGre, MangoDB
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -121,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = ['static']
+STATICFILES_DIRS = ['static',]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
