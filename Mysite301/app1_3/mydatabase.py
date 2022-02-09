@@ -8,7 +8,7 @@ import sqlite3
 import sys
 from app1_3.person import Person
 
-DB_FILE = "./db.sqlite3"
+DB_FILE = "db.sqlite3"
 
 class MyDatabase():
     def connect_db(self):

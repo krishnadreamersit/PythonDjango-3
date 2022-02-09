@@ -6,5 +6,12 @@
 </head>
 <body>
     <h1>Database Connection and Models</h1>
+    <table border="1" width="95%">
+    <tr><td>ID</td><td>NAME</td><td>ADDRESS</td></tr>
+
+    {% for person in persons %}
+        <tr><td>{{ person.pid }}</td><td>{{ person.fullname }}</td><td>{{ person.contactaddress }}</td></tr>
+    {% endfor %}
+    </table>
 </body>
 </html>

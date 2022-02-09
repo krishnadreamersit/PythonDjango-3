@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     'app1_1', # Hello world, function in views, url pattern, html rander, static contents (css, image, js)
     'app1_2', # Getting Values form Client
-    'app1_3', # CRUD Application-1
+    'app1_3', # CRUD Application-1 # Plain HTML
+    'app1_4', # CRUD Application-2 # Bootstrap
 
     'app2_1', # Database Connection and Model
 
@@ -126,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = ['static',]
+STATICFILES_DIRS = ['static',] # Added
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
