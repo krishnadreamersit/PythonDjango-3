@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'app1_4', # CRUD Application-2 # Bootstrap
 
     'app2_1', # Database Connection and Model
+    'app3_1', # WebForm
+
+
+
 
 ]
 

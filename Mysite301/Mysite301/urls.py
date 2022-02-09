@@ -24,5 +24,6 @@ urlpatterns = [
     path('app1_4/', include('app1_4.urls')), # http://127.0.0.1:8000/app1_4/
 
     path('app2_1/', include('app2_1.urls')),
+    path('app3_1/', include('app3_1.urls')),
     path('admin/', admin.site.urls),
 ]
