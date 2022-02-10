@@ -45,10 +45,7 @@ INSTALLED_APPS = [
 
     'app2_1', # Database Connection and Model
     'app3_1', # WebForm
-
-
-
-
+    'app4_1', # ModelForm
 ]
 
 MIDDLEWARE = [
