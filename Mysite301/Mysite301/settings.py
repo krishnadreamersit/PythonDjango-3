@@ -40,12 +40,22 @@ INSTALLED_APPS = [
 
     'app1_1', # Hello world, function in views, url pattern, html rander, static contents (css, image, js)
     'app1_2', # Getting Values form Client
+
     'app1_3', # CRUD Application-1 # Plain HTML
     'app1_4', # CRUD Application-2 # Bootstrap
 
     'app2_1', # Database Connection and Model
+    'app2_2', # Model - CRUD Application
+
     'app3_1', # WebForm
+    'app3_2', # WebForm - CRUD Application
+
     'app4_1', # ModelForm
+    'app4_2', # ModelForm - CRUD Application
+
+    'app5_1', # GenericViews - CRUD Application
+
+    'app6_0', # DJango TemplateLanguage
 ]
 
 MIDDLEWARE = [
