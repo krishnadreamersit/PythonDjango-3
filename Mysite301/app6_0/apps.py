@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class App51Config(AppConfig):
-    name = 'app5_1'
+class App60Config(AppConfig):
+    name = 'app6_0'

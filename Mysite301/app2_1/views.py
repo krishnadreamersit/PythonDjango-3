@@ -23,7 +23,7 @@ def index(request):
     # for person in persons:
     #     print(person)
     # context = {'persons':persons}
-    # return render(request, 'app2_1/index.html', context)
+    # return render(request, 'app2_1/new.html', context)
 
     # Search Record
     # person = Person.objects.get(pid=10)
@@ -31,7 +31,7 @@ def index(request):
 
     # Filter Records
     # persons = Person.objects.filter() # All Records
-    # return render(request, 'app2_1/index.html', {'persons':persons})
+    # return render(request, 'app2_1/new.html', {'persons':persons})
 
     # Update/Edit Record
     # person = Person.objects.get(pid=1)
@@ -117,7 +117,7 @@ def crud(request):
     # results = Client.objects.values()
     # print(type(results))
     # print(type(results[0]))
-    #return render(request, "app2_2/index.html", {'results':results})
+    #return render(request, "app2_2/new.html", {'results':results})
 
     # Result to List
     # results = Client.objects.all()
@@ -126,7 +126,7 @@ def crud(request):
     # client = results[0]
     # print(type(client))
     # print(client.id, client.full_name, client.contact_address)
-    # return render(request, "app2_2/index.html", {'results':results})
+    # return render(request, "app2_2/new.html", {'results':results})
 
 # Update
     # Individual Object Update

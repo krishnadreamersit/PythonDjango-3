@@ -45,13 +45,13 @@ INSTALLED_APPS = [
     'app1_4', # CRUD Application-2 # Bootstrap
 
     'app2_1', # Database Connection and Model
-    'app2_2', # Model - CRUD Application
+    'app2_2', # DjangoModel - CRUD Application
 
-    'app3_1', # WebForm
-    'app3_2', # WebForm - CRUD Application
+    'app3_1', # DjangoForm
+    'app3_2', # DjangoForm - CRUD Application
 
-    'app4_1', # ModelForm
-    'app4_2', # ModelForm - CRUD Application
+    'app4_1', # DjangoModelForm
+    'app4_2', # DjangoModelForm - CRUD Application
 
     'app5_1', # GenericViews - CRUD Application
 

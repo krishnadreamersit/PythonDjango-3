@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 
 def index(request):
     # get all records from database
-    # send all records to index.html file
+    # send all records to new.html file
     mydb = MyDatabase();
     persons = mydb.select_all2()
     # for person in persons:
@@ -26,6 +26,7 @@ def save(request):
     address = request.POST.get('txtAddress')
     mydb = MyDatabase(); # Create database object
     result = mydb.insert_record(pid, name, address) # insert record in database
+    # Alert status of inserting record (Success/Error) # JavaScript
     return HttpResponseRedirect('index')
 
 def edit(request):

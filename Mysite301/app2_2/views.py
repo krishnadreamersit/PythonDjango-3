@@ -1,8 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from .models import Person
-from .models import Student
-from .models import Client
+
 
 
 # Create your views here.
@@ -36,6 +35,7 @@ def display_edit(request):
     person = Person.objects.get(pid=pid)
     print("For Edit ", person)
     return render(request, 'app2_2/edit.html', {'person': person})
+
 
 def update(request):
     pid = request.POST.get('txt_id')

@@ -14,7 +14,7 @@ mydb = MyDatabase()
 # print(mydb.insert_record(4, "Krishna Aryal", "Ktm"))
 
 # Select All Records
-print(mydb.select_all())
+# print(mydb.select_all())
 
 # Search Records (fullname, contactaddress)
 # print(mydb.search_record('Lalipur'))
