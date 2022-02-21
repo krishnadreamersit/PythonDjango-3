@@ -3,7 +3,6 @@ from django.shortcuts import render
 from .models import Person
 
 
-
 # Create your views here.
 def index(request):
     persons = Person.objects.all()
@@ -44,6 +43,7 @@ def update(request):
     person.contact_address = request.POST.get('txt_address')
     person.save()
     return HttpResponseRedirect("..")
+
 
 def display_delete(request):
     pid = request.GET.get('pid')

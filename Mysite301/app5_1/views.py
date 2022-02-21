@@ -7,6 +7,7 @@ from django.urls import reverse_lazy # Helper of DeleteView
 
 from .models import Person
 
+
 class PersonCreate(CreateView):
     model = Person
     fields = ['full_name', 'contact_address', 'email', 'mobile']
@@ -17,14 +18,17 @@ class PersonCreate(CreateView):
 class ListPersons(ListView):
     model = Person
 
+
 class PersonDetail(DetailView):
     model = Person
+
 
 class PersonUpdate(UpdateView):
     model = Person
     fields = ['full_name', 'contact_address', 'email', 'mobile']
     template_name = 'app5_1/person_form.html'
     success_url = '../../'
+
 
 class PersonDelete(DeleteView):
     model = Person

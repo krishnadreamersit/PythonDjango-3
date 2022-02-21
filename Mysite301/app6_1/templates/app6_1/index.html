@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>Variables</h1>
+<h2>Welcome to {{ name }}</h2>
+<p>ID : {{ id }}</p>
+<p>Name :  {{ name }}</p>
+<p>Address :  {{ address }}</p>
+<p>Office : {{ office }}</p>
+
+<h1>Tags</h1>
+{% filter lower %}
+    {{ name }}
+{% endfilter %}
+
+<h1>Filter</h1>
+{{ name | upper }}
+
+</body>
+</html>
