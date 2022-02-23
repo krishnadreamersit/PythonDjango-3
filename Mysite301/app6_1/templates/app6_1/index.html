@@ -13,9 +13,70 @@
 <p>Office : {{ office }}</p>
 
 <h1>Tags</h1>
+{% comment %}
+    <h3>autoscape</h3>
+    {% autoescape on %}
+        <p>{{ var1 }}</p>
+    {% endautoescape %}
+
+    {% autoescape off %}
+        <p>{{ var1 }}</p>
+    {% endautoescape %}
+{% endcomment %}
+
+{% comment %}
+<h3>cycle</h3>
+<style>
+    .s1{
+        background-color:#b6effb;
+    }
+    .s2{
+        background-color:#cbccce;
+    }
+    .s3{
+        background-color: #b6d4fe;
+    }
+</style>
+<table border="1" width="90%">
+    <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>ADDRESS</td>
+    </tr>
+
+    {% for person in persons %}
+        <tr class="{% cycle 's1' 's2' 's3' %}">
+            <td>{{ person.id }}</td>
+            <td>{{ person.name }}</td>
+            <td>{{ person.address }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+<h3>firstof</h3>
+    {% firstof var1 var2 var3 %}
+
+<h3>filter</h3>
 {% filter lower %}
     {{ name }}
 {% endfilter %}
+
+<h3>for ... empty</h3>
+{% for person in persons %}
+    <h4>{{ person.id }} {{ person.name }}</h4>
+{% empty %}
+    <h3>Record not found</h3>
+{% endfor %}
+
+<h3>if</h3>
+{% if values.n1 >= values.n2 %}
+    <h4>{{ values.n1 }}</h4>
+{% else %}
+    <h4>{{ values.n2 }}</h4>
+{% endif %}
+
+{% endcomment %}
+
 
 <h1>Filter</h1>
 {{ name | upper }}
