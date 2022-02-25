@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from datetime import datetime
 # Create your views here.
 
 def index(request):
@@ -78,3 +78,13 @@ def index(request):
     # regroup ? # Record Grouping
 
 
+def filter_test(request):
+    # add
+    # return render(request, 'app6_1/index2.html',{'n1':'2', 'n2':'4'})
+    dt1 = datetime.now()
+    persons = [
+        {'name': 'zed', 'age': 19},
+        {'name': 'amy', 'age': 22},
+        {'name': 'joe', 'age': 31},
+    ]
+    return render(request, 'app6_1/index2.html',{'n1':'2', 'n2':'4', 'dt1':dt1, 'persons': persons, 'str1':"person"})

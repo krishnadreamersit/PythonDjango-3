@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'app5_1', # GenericViews - CRUD Application
 
     'app6_1', # DJango Template Language
+
+    'app7_1', # User Management
 ]
 
 MIDDLEWARE = [

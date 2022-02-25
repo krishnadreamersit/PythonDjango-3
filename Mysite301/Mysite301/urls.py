@@ -22,18 +22,14 @@ urlpatterns = [
     path('app1_2/', include('app1_2.urls')), #http://127.0.0.1:8000/app1_2/
     path('app1_3/', include('app1_3.urls')), #http://127.0.0.1:8000/app1_3/
     path('app1_4/', include('app1_4.urls')), # http://127.0.0.1:8000/app1_4/
-
     path('app2_1/', include('app2_1.urls')),
     path('app2_2/', include('app2_2.urls')),
     path('app3_1/', include('app3_1.urls')),
     path('app3_2/', include('app3_2.urls')),
-
     path('app4_1/', include('app4_1.urls')),
     path('app4_2/', include('app4_2.urls')),
-
     path('app5_1/', include('app5_1.urls')),
-
     path('app6_1/', include('app6_1.urls')),
-
+    path('app7_1/', include('app7_1.urls')), # User Management
     path('admin/', admin.site.urls),
 ]

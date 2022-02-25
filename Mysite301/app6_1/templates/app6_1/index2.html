@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filters</title>
+</head>
+<body>
+    <h1>Filter Test</h1>
+    <p>n1 = {{ n1 }}</p>
+    <p>n2 = {{ n2 }}</p>
+    <p>add = {{ n1|add:n2 }}</p>
+    <p>{{ "I'am using Django"|addslashes }}</p>
+    <p>{{ "hellow World of DJango"|capfirst }}</p>
+    <p>{{ "nepal"|center:"30" }}</p>
+    <p>{{ dt1|date:"D d/M/Y" }}</p>
+    <p>{{ ''|default:'NA' }}</p>
+    <p>{{ 'None'|default_if_none:"NA" }}</p>
+    <p>{{ persons|dictsort:"name" }}</p>
+    <p>{{ persons|dictsortreversed:"name" }}</p>
+    <p>{{ 50000|filesizeformat }}</p>
+    <p>{{ 34.00000|floatformat:2 }}</p>
+    <p>{{ "value"|length }}</p>
+    <p>{{ str1 | pluralize}}</p>
+
+</body>
+</html>
