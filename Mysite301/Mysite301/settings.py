@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -58,6 +59,16 @@ INSTALLED_APPS = [
     'app6_1', # DJango Template Language
 
     'app7_1', # User Management
+
+    'app8_1', # Session Management
+    'app8_2', # Cookies Management
+
+    'app9_1', # Creating Non-HTML Content
+
+    'app10_1', # Sending Email
+    # 'app10_2', # Sending Email with Attachment File - HW
+
+    'app11_1', # File Upload
 ]
 
 MIDDLEWARE = [
@@ -139,10 +150,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = 'static/'
 STATICFILES_DIRS = ['static',] # Added
+
+# File Uploading
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Sending Email through gmail gateway
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'test@gmail.com'
+EMAIL_HOST_PASSWORD = 'test@password'
+
+# https://www.google.com/settings/security/lesssecureapps

@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
-
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
@@ -45,7 +44,7 @@ def index(request):
     return HttpResponse("Hello");
 
 # Task
-# Create an application which manage users.
+# Create an application which manage users. (CRUD App)
     # List all users
     # Filter users
     # Create new user

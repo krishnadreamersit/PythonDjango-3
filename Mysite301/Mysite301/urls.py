@@ -31,5 +31,11 @@ urlpatterns = [
     path('app5_1/', include('app5_1.urls')),
     path('app6_1/', include('app6_1.urls')),
     path('app7_1/', include('app7_1.urls')), # User Management
+    path('app8_1/', include('app8_1.urls')), # Session Management
+    path('app8_2/', include('app8_2.urls')), # Cookie Management
+    path('app9_1/', include('app9_1.urls')), # Non-HTML Content
+    path('app10_1/', include('app10_1.urls')), # Sending Email
+    path('app11_1/', include('app11_1.urls')), # Uploading File
+
     path('admin/', admin.site.urls),
 ]
