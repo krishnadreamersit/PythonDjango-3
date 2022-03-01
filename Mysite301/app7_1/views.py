@@ -1,19 +1,20 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
+
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
 # Create your views here.
 
-
 def index(request):
     # User Management
+
     #1. Creating new user
-    # first_name
-    # last_name
-    # email
     # username
     # password
+    # email
+    # first_name
+    # last_name
 
     # user1 = User.objects.create_user(username='admin2', password='admin2', email='admin2@gmail.com', first_name='Bikki', last_name='Sharma')
     # user1.save()
@@ -22,7 +23,6 @@ def index(request):
     # user2.first_name='Sanjaya'
     # user2.last_name = 'Sharma'
     # user2.save()
-
 
     #2. Retrieve all users
     users = User.objects.all()

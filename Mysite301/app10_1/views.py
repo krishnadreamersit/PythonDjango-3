@@ -32,8 +32,8 @@ def send_mymail():
     fromaddr = 'info.karyal@gmail.com'
     toaddrs = 'sabinstha447@gmail.com'
     msg = 'Spam email Test'
-    username = 'krishna.dreamersit@gmail.com'
-    password = 'Nepal@123'
+    username = 'mail@gmail.com'
+    password = 'pass@word'
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()

@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-
 def index(request):
     if request.method =='POST':
         user = request.POST.get('txt_user')

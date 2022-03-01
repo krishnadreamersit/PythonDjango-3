@@ -66,9 +66,13 @@ INSTALLED_APPS = [
     'app9_1', # Creating Non-HTML Content
 
     'app10_1', # Sending Email
-    # 'app10_2', # Sending Email with Attachment File - HW
+    'app10_2', # Sending Email with Attachment File - HW
 
     'app11_1', # File Upload
+
+    'rest_framework', # REST API Library
+    'app12_1', # Rest API-1
+    'app12_2', # Rest API-1 CRUD App
 ]
 
 MIDDLEWARE = [

@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('app1_1/', include('app1_1.urls')), #http://127.0.0.1:8000/app1_1/
     path('app1_2/', include('app1_2.urls')), #http://127.0.0.1:8000/app1_2/
@@ -35,7 +38,11 @@ urlpatterns = [
     path('app8_2/', include('app8_2.urls')), # Cookie Management
     path('app9_1/', include('app9_1.urls')), # Non-HTML Content
     path('app10_1/', include('app10_1.urls')), # Sending Email
-    path('app11_1/', include('app11_1.urls')), # Uploading File
-
+    path('app11_1/', include('app11_1.urls')), # Uploading File![](C:/Users/ASUS/AppData/Local/Temp/0-02-03-210a20fd4fb211362013daf9af35816ae098de897811d6e49ae31a4b65a63079_beef72025293ee64.jpg)
+    path('app12_1/', include('app12_1.urls')), # Uploading File![](C:/Users/ASUS/AppData/Local/Temp/0-02-03-210a20fd4fb211362013daf9af35816ae098de897811d6e49ae31a4b65a63079_beef72025293ee64.jpg)
+    path('app12_2/', include('app12_2.urls')),
+    path('app12_2/', include('app12_2.urls')),
     path('admin/', admin.site.urls),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
