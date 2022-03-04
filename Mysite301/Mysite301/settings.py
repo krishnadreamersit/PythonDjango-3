@@ -67,6 +67,7 @@ INSTALLED_APPS = [
 
     'app10_1', # Sending Email
     'app10_2', # Sending Email with Attachment File - HW
+    # 'crispy_forms_tags',
 
     'app11_1', # File Upload
 

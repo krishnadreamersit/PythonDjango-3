@@ -13,7 +13,7 @@ def index(request):
 def create_image(request):
     file_path = staticfiles_storage.path('app9_1/images/image_1.png')
     image_data = open(file_path, "rb").read()
-    return HttpResponse(image_data, content_type="image/png")
+    return HttpResponse(image_data, content_type="image/png") # Send to Browser
 
 
 def create_csv(request):
@@ -33,3 +33,9 @@ def create_pdf(request):
     p.showPage()
     p.save()
     return response
+
+# Task
+    # Word
+    # Excel
+    # PowerPoint
+    # JPG/GIF

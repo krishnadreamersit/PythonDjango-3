@@ -38,6 +38,7 @@ urlpatterns = [
     path('app8_2/', include('app8_2.urls')), # Cookie Management
     path('app9_1/', include('app9_1.urls')), # Non-HTML Content
     path('app10_1/', include('app10_1.urls')), # Sending Email
+    # path('app10_2/', include('app10_2.urls')), # Sending Email with Attachment
     path('app11_1/', include('app11_1.urls')), # Uploading File![](C:/Users/ASUS/AppData/Local/Temp/0-02-03-210a20fd4fb211362013daf9af35816ae098de897811d6e49ae31a4b65a63079_beef72025293ee64.jpg)
     path('app12_1/', include('app12_1.urls')), # Uploading File![](C:/Users/ASUS/AppData/Local/Temp/0-02-03-210a20fd4fb211362013daf9af35816ae098de897811d6e49ae31a4b65a63079_beef72025293ee64.jpg)
     path('app12_2/', include('app12_2.urls')),

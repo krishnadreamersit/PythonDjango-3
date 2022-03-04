@@ -12,6 +12,7 @@ class IndexView(View):
     pass
 
 
+
 class EmailAttachementView(View):
     form_class = EmailForm
     template_name = 'app10_2/compose.html'

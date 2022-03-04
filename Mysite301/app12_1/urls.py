@@ -6,5 +6,4 @@ urlpatterns = [
     path('customers/', views.CustomerList.as_view()),
     path('customers/<int:pk>/', views.CustomerDetail.as_view()),
 ]
-
 urlpatterns = format_suffix_patterns(urlpatterns)
